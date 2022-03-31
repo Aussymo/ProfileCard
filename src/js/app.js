@@ -32,15 +32,34 @@ function render(variables = {}) {
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
-          <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <img src="${
+            variables.avatarURL ? variables.avatarURL : "avatar"
+          }" class="photo" />
+          <h1>${variables.name ? variables.name : "User"} ${
+    variables.lastname ? variables.lastname : "Name"
+  }
+  </h1>
+          <h2>${variables.role ? variables.role : "Role"}</h2>
+          <h3>${variables.city ? variables.city : "City"} ${
+    variables.country ? variables.country : ",Country"
+  }
+  </h3>
+          <ul class="${variables.socialMediaPosition}">
+            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter">${
+              variables.twitter ? variables.twitter : "Twitter"
+            }</i></a></li>
+            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i>${
+              variables.github ? variables.github : "Github"
+            }
+            </a></li>
+            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin">${
+              variables.linkedin ? variables.linkedin : "Linkedin"
+            }
+            </i></a></li>
+            <li><a href="https://instagram.com/aussy_mo"><i class="fab fa-instagram"></i>${
+              variables.instagram ? variables.instagram : "Instagram"
+            }
+            </a></li>
           </ul>
         </div>
     `;
