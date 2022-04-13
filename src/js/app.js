@@ -45,20 +45,20 @@ function render(variables = {}) {
   }
   </h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter">${
+            <li><a href="${
               variables.twitter ? variables.twitter : "Twitter"
-            }</i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i>${
+            }"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="${
               variables.github ? variables.github : "Github"
-            }
+            }"><i class="fab fa-github"></i>
             </a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin">${
+            <li><a href="${
               variables.linkedin ? variables.linkedin : "Linkedin"
-            }
+            }"><i class="fab fa-linkedin">
             </i></a></li>
-            <li><a href="https://instagram.com/aussy_mo"><i class="fab fa-instagram"></i>${
+            <li><a href="${
               variables.instagram ? variables.instagram : "Instagram"
-            }
+            }"><i class="fab fa-instagram"></i>
             </a></li>
           </ul>
         </div>
